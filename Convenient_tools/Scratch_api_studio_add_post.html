@@ -1,8 +1,19 @@
 <html>
   <head>
-    
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // フォームのデフォルトの送信動作を防ぎます
+
+  var myNumber = document.getElementById('myNumber').value; // 入力された数値を取得します
+
+  // APIリクエストを作成します
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'https://your-api-url.com', true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(JSON.stringify({ number: myNumber }));
+});
+
   </head>
   <body>
-    <form name="project_ID" method="post">write project ID<input type="number"></input></form>
+    <form name="project_ID" method="post" value="Submit">write project ID<input type="number"></input></form>
   </body>
 </html>
