@@ -1,17 +1,18 @@
 <html>
   <head>
-    document.getElementById('myForm').addEventListener('submit', function(event) {
-  event.preventDefault(); // フォームのデフォルトの送信動作を防ぎます
+    <script>
+      document.getElementById('myForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // フォームのデフォルトの送信動作を防ぎます
 
-  var myNumber = document.getElementById('myNumber').value; // 入力された数値を取得します
-
-  // APIリクエストを作成します
-  var xhr = new XMLHttpRequest();
-  xhr.open('POST', 'https://api.scratch.mit.edu', true);
-  xhr.setRequestHeader('Content-Type', 'application/json');
-  xhr.send(JSON.stringify({ number: myNumber }));
-});
-
+      var myNumber = document.getElementById('myNumber').value; // 入力された数値を取得します
+      
+      // APIリクエストを作成します
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', 'https://api.scratch.mit.edu/studios/34279161/project/928023182', true);
+      xhr.setRequestHeader('Content-Type', 'application/json');
+      xhr.send(JSON.stringify({ number: myNumber }));
+      });
+    </script>
   </head>
   <body>
     <form name="project_ID" method="post" value="Submit">write project ID<input type="number"></input></form>
