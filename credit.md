@@ -1,5 +1,5 @@
 # credits
-## /PaperMinecraft_JEdition
+## /games/PaperMinecraft_JEdition
 
 https://scratch.mit.edu/projects/763412642 by @jacker114
 https://scratch.mit.edu/projects/690457365 by @numanuma3
